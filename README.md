@@ -1,4 +1,7 @@
+<img src="README.assets/gazer-17417039661842.png" alt="gazer" style="zoom:38%;float:left;" />
+
 # gazer-cli
+
 Command line interface of "gazer" project
 
 | command | Remarks                    |

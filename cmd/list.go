@@ -12,7 +12,6 @@ var listCmd = &cobra.Command{
 	Short: "get the list of log files.",
 
 	Run: func(cmd *cobra.Command, args []string) {
-		// 加入etcd
 		list, err := etcd.List(common.Ip)
 		if err != nil {
 			fmt.Println(err.Error())

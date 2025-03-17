@@ -27,7 +27,7 @@ func Close() {
 func Add(ip, topic, path string) (err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
-	getResp, err := client.Get(ctx, ip)
+	getResp, err := client.Get(ctx, ip+"\\"+topic)
 	if err != nil {
 		return fmt.Errorf("failed to connect or access etcd: %v", err)
 	}
@@ -50,7 +50,7 @@ func Add(ip, topic, path string) (err error) {
 func Update(ip, topic, path string) (err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
-	getResp, err := client.Get(ctx, ip)
+	getResp, err := client.Get(ctx, ip+"\\"+topic)
 	if err != nil {
 		return fmt.Errorf("failed to connect or access etcd: %v", err)
 	}
@@ -72,7 +72,7 @@ func Update(ip, topic, path string) (err error) {
 func Delete(ip, topic string) (err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
-	getResp, err := client.Get(ctx, ip)
+	getResp, err := client.Get(ctx, ip+"\\"+topic)
 	if err != nil {
 		return fmt.Errorf("failed to connect or access etcd: %v", err)
 	}

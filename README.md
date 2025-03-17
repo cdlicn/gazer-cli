@@ -1,4 +1,4 @@
-<img src="README.assets/gazer-17417039661842.png" alt="gazer" style="zoom:38%;float:left;" />
+<img src="assets/gazer.png" alt="gazer" style="zoom:38%;float:left;" />
 
 # gazer-cli
 
